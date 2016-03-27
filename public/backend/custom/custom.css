@@ -1,0 +1,73 @@
+.login-bg .wrapper {
+    background: #FFFFFF;
+}
+.login-box {
+    border: 1px solid #DDD;
+}
+.login-box-body {
+    background: #F7F7F7;
+}
+.login-bg .alert-danger {
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+}
+.skin-black .content-header {
+    background: #F9F9F9;
+    padding: 15px 15px 15px 15px;
+}
+.content-wrapper {
+    background-color: #F7F7F7;
+}
+.smart-table .pagination {
+    margin:0px !important;
+}
+.nav-tabs-custom>.nav-tabs>li>a {
+    text-transform: uppercase;
+}
+.nav-tabs-custom>.nav-tabs>li.init-hide {
+    display: none;
+}
+.no-padding {
+    padding:0px;
+}
+.nav-tabs-custom {
+    margin-bottom: 0px;
+    box-shadow: none;
+}
+.st-sort-ascent:before{
+    content: '\25B2';
+    float: right;
+}
+.st-selected {
+    background: #F9F9F9;
+}
+.st-sort-descent:before{
+    content: '\25BC';
+    float: right;
+}
+.link-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.table-bordered {
+    border: 2px solid #f4f4f4;
+}
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p.fs-smaller {
+    font-size: smaller;
+}
+.error-help-block {
+    color: #E34F1E;
+}
+.flash-alert {
+    padding: 8px;
+    margin-bottom:0px;
+}
+.alert-primary {
+    background: aliceblue;
+    border: 1px solid skyblue;
+    color: #444;
+}
+.alert-dismissable .close, .alert-dismissible .close {
+    right:0px;
+}
