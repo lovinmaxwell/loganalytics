@@ -71,3 +71,6 @@
 .alert-dismissable .close, .alert-dismissible .close {
     right:0px;
 }
+.valign-center{
+  vertical-align: inherit !important;
+}

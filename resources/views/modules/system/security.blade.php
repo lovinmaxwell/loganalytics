@@ -1,19 +1,24 @@
 @extends('backend.templates.default-nofooter-nosidebar-search')
 
 @section('content')
+<section class="content-header">
+  <h1>
+    Security logs
+    <small>Firewall responses, Security access, System access</small>
+  </h1>
+</section>
+
 <section class="content">
+
       <!-- Graph -->
       <div class="row">
         <div class="col-md-12">
-
           <div class="box box-default">
             <div class="box-header with-border">
-              <h3 class="box-title">Security logs</h3>
+              <h3 class="box-title">Firewall response hits - [ Hits vs Time in ms.] </h3>
               <div class="box-tools pull-right">
-                Real time
                 <div class="btn-group" id="realtime" data-toggle="btn-toggle">
-                  <button type="button" class="btn btn-default btn-xs active" data-toggle="on">On</button>
-                  <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="on"><i class="fa fa-minus"></i></button>
                 </div>
               </div>
             </div>
@@ -21,9 +26,146 @@
               <div id="interactive" style="height: 300px;"></div>
             </div>
           </div>
-
         </div>
       </div>
+
+      <!-- Table -->
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="box box-default">
+            <div class="box-header with-border">
+              <h3 class="box-title">Security access denied [ Top 10 ]</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            <div class="box-body no-padding">
+
+
+              <p>Graph</p>
+
+              <table class="table table-bordered table-striped table-condensed">
+
+              <tr>
+                <th style="width: 10px">#</th>
+                <th>Type</th>
+                <th>Message</th>
+                <th>Int. In</th>
+                <th>Int. Out</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>ICMP Type</th>
+                <th>Packet Length</th>
+                <th>TOS</th>
+                <th>TTL</th>
+                <th>Freq.</th>
+              </tr>
+
+              <tr>
+                <td rowspan="4" class="text-center valign-center">1.</td>
+                <td rowspan="4" class="text-center valign-center">AC</td>
+                <td rowspan="4" class="text-center valign-center">Access Denied</td>
+                <td>eth0</td>
+                <td>eth1</td>
+                <td>131.107.3.51</td>
+                <td>192.9.200.2</td>
+                <td>8</td>
+                <td>60</td>
+                <td>0X00</td>
+                <td>127</td>
+                <td><span class="badge bg-red">95%</span></td>
+              </tr>
+
+              <tr>
+                <td>eth1</td>
+                <td>eth0</td>
+                <td>192.9.200.172</td>
+                <td>131.107.3.200</td>
+                <td>3</td>
+                <td>56</td>
+                <td>0X00</td>
+                <td>63</td>
+                <td><span class="badge bg-yellow">86%</span></td>
+              </tr>
+
+              <tr>
+                <td>Io</td>
+                <td>N/A</td>
+                <td>192.168.222.1</td>
+                <td>192.168.222.1</td>
+                <td>3</td>
+                <td>117</td>
+                <td>0X00</td>
+                <td>64</td>
+                <td><span class="badge bg-blue">50%</span></td>
+              </tr>
+
+              <tr>
+                <td>N/A</td>
+                <td>eth3</td>
+                <td>192.168.222.1</td>
+                <td>192.168.222.2</td>
+                <td>3</td>
+                <td>60</td>
+                <td>0X00</td>
+                <td>64</td>
+                <td><span class="badge bg-grey">20%</span></td>
+              </tr>
+
+
+              <tr>
+                <td rowspan="4" class="text-center valign-center">2.</td>
+                <td rowspan="4" class="text-center valign-center">SE</td>
+                <td rowspan="4" class="text-center valign-center">PING FROM F/W</td>
+                <td rowspan="2" class="text-center valign-center">eth0</td>
+                <td>eth1</td>
+                <td>131.107.3.51</td>
+                <td>192.9.200.2</td>
+                <td>8</td>
+                <td>60</td>
+                <td>0X00</td>
+                <td>127</td>
+                <td><span class="badge bg-grey">35%</span></td>
+              </tr>
+
+
+              <tr>
+                <td>N/A</td>
+                <td>192.9.200.172</td>
+                <td>192.9.200.173</td>
+                <td>8</td>
+                <td>60</td>
+                <td>0X00</td>
+                <td>127</td>
+                <td><span class="badge bg-grey">45%</span></td>
+              </tr>
+
+
+
+            </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-default">
+            <div class="box-header with-border">
+              <h3 class="box-title">System security access denied [ Top 10 ]</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
 </section>
 @endsection
 
@@ -50,27 +192,27 @@
     function getRandomData() {
 
       if (data.length > 0)
-	data = data.slice(1);
+      data = data.slice(1);
 
       // Do a random walk
       while (data.length < totalPoints) {
 
-	var prev = data.length > 0 ? data[data.length - 1] : 50,
-	    y = prev + Math.random() * 10 - 5;
+        var prev = data.length > 0 ? data[data.length - 1] : 50,
+        y = prev + Math.random() * 10 - 5;
 
-	if (y < 0) {
-	  y = 0;
-	} else if (y > 100) {
-	  y = 100;
-	}
+        if (y < 0) {
+          y = 0;
+        } else if (y > 100) {
+          y = 100;
+        }
 
-	data.push(y);
+        data.push(y);
       }
 
       // Zip the generated y values with the x values
       var res = [];
       for (var i = 0; i < data.length; ++i) {
-	res.push([i, data[i]]);
+        res.push([i, data[i]]);
       }
 
       return res;
@@ -78,26 +220,39 @@
 
     var interactive_plot = $.plot("#interactive", [getRandomData()], {
       grid: {
-	borderColor: "#f3f3f3",
-	borderWidth: 1,
-	tickColor: "#f3f3f3"
+          borderColor: "#f3f3f3",
+	        borderWidth: 1,
+          tickColor: "#f3f3f3"
       },
       series: {
-	shadowSize: 0, // Drawing is faster without shadows
-	color: "#3c8dbc"
+        shadowSize: 0, // Drawing is faster without shadows
+        color: "#3c8dbc"
       },
       lines: {
-	fill: true, //Converts the line chart to area chart
-	color: "#3c8dbc"
+        fill: true, //Converts the line chart to area chart
+        color: "#3c8dbc"
       },
       yaxis: {
-	min: 0,
-	max: 100,
-	show: true
+        min: 0,
+        max: 100,
+        show: true
       },
       xaxis: {
-	show: true
-      }
+        show: true
+      },
+      axisLabels: {
+            show: true
+        },
+        xaxes: [{
+            axisLabel: 'foo',
+        }],
+        yaxes: [{
+            position: 'left',
+            axisLabel: 'bar',
+        }, {
+            position: 'right',
+            axisLabel: 'bleem'
+        }]
     });
 
     var updateInterval = 500; //Fetch data ever x milliseconds
