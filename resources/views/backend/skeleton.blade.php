@@ -63,7 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 </head>
 
-<body class="{{ getenv('BODY_CLASS') }} @if(Request::segment(1) == 'login'){{'login-bg'}} @endif">
+<body class="{{ getenv('BODY_CLASS') }} @if(Request::segment(1) == 'login'){{'login-bg'}} @endif" id="table">
 
     <div class="wrapper">
 

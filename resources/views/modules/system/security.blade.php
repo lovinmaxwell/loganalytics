@@ -393,4 +393,4 @@
 	+ Math.round(series.percent) + "%</div>";
   }
 </script>
-@stop
+@endsection
