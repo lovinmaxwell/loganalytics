@@ -1,0 +1,318 @@
+.login-bg .wrapper {
+    background: #FFFFFF;
+}
+.login-box {
+    border: 1px solid #DDD;
+}
+.login-box-body {
+    background: #F7F7F7;
+}
+.login-bg .alert-danger {
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+}
+.skin-black .content-header {
+    background: #F9F9F9;
+    padding: 15px 15px 15px 15px;
+}
+.content-wrapper {
+    background-color: #F7F7F7;
+}
+.smart-table .pagination {
+    margin:0px !important;
+}
+.nav-tabs-custom>.nav-tabs>li>a {
+    text-transform: uppercase;
+}
+.nav-tabs-custom>.nav-tabs>li.init-hide {
+    display: none;
+}
+.no-padding {
+    padding:0px;
+}
+.nav-tabs-custom {
+    margin-bottom: 0px;
+    box-shadow: none;
+}
+.st-sort-ascent:before{
+    content: '\25B2';
+    float: right;
+}
+.st-selected {
+    background: #F9F9F9;
+}
+.st-sort-descent:before{
+    content: '\25BC';
+    float: right;
+}
+.link-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.table-bordered {
+    border: 2px solid #f4f4f4;
+}
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p.fs-smaller {
+    font-size: smaller;
+}
+.error-help-block {
+    color: #E34F1E;
+}
+.flash-alert {
+    padding: 8px;
+    margin-bottom:0px;
+}
+.alert-primary {
+    background: aliceblue;
+    border: 1px solid skyblue;
+    color: #444;
+}
+.alert-dismissable .close, .alert-dismissible .close {
+    right:0px;
+}
+.valign-center{
+  vertical-align: inherit !important;
+}
+
+/*START: STYLESHEETS FOR VIS CHARTS*/
+
+/*STYLESHEETS FOR SENSOR MEMORY*/
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #f3f3f3;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: .7em;
+    color: #a0a0a0;
+}
+
+.areaM {
+    fill: rgba(0, 160, 233, 0.7);
+}
+
+.memtipPoints {
+    stroke: white;
+    stroke-width: 2px;
+    opacity: 0;
+    fill: #00a0e9;
+}
+
+.tipDot {
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+/*STYLESHEETS FOR SENSOR DOCKER ISSUES*/
+.panel-checkbox {
+    background-color:#eaf8ff;
+    top:14px;
+    padding-left:15px;
+    padding-right: 0px;
+    padding-top: 4px;
+    margin-bottom: 5px;
+    height:348px;
+    /*max-width: 10em;*/
+}
+.panel-checkbox text {
+    font-size: .8em;
+    fill: #000000;
+    margin-left: .5em;
+}
+.panel-checkbox p {
+    font-size: .8em;
+    fill: #000000;
+}
+.panel-checkbox input {
+    margin-top: 3px;
+    padding-top: 2px;
+}
+
+.panel-checkbox-xs {
+    background-color:#eaf8ff;
+    margin-top: 10px;
+    margin-left: 24px;
+    margin-right: 10px;
+    padding: 4px;
+    /*max-width: 10em;*/
+}
+.panel-checkbox-xs text {
+    font-size: .8em;
+    fill: #000000;
+    margin-left: .5em;
+}
+.panel-checkbox-xs p {
+    font-size: .8em;
+    fill: #000000;
+}
+.panel-checkbox-xs input {
+    margin-top: 2px;
+}
+
+.scatter_checkbox text{
+    font-size: .3em;
+}
+
+.legendRect {
+    stroke: #aaabb1;
+    stroke-width: 1px;
+    fill: none;
+}
+
+.scatter_circle {
+    stroke: none;
+}
+
+/*STYLESHEETS FOR SENSOR CPU*/
+.donutCenterText {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*STYLESHEETS FOR SENSOR NETWORK*/
+.areaU {
+    fill: rgba(0, 160, 233, 0.2);
+}
+
+.areaD {
+    fill: rgba(34, 172, 56, 0.2);
+}
+
+.tipPoints {
+    stroke: white;
+    stroke-width: 2px;
+    opacity: 0;
+}
+
+.tipNetPoints {
+    stroke: white;
+    stroke-width: 2px;
+    opacity: 0;
+}
+
+.tipDot {
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+/*STYLESHEETS FOR SENSOR DISK*/
+.areaR {
+    fill: rgba(0, 160, 233, 0.2);
+}
+
+.areaW {
+    fill: none;
+    stroke: rgba(0, 160, 233, 1);
+    stroke-width: 2px;
+}
+
+/*STYLESHEETS FOR SENSOR PEOPLE MONITOR*/
+.monitorCircle {
+    fill: #222;
+    stroke: #000;
+    stroke-width: 0em;
+}
+
+.moniOutlineArc {
+    fill: none;
+    stroke: gray;
+    stroke-width: 1;
+}
+
+/*STYLESHEETS FOR SENSOR TIMELINE CHART*/
+.timeRect {
+  	opacity: 1;
+}
+
+.innertimeRect {
+    fill: rgba(0, 160, 233, 0.8);
+}
+.outertimeRect {
+    fill: rgba(0, 160, 233, .2);
+}
+
+/*STYLESHEETS FOR SENSOR DETECTION AND LATENCY MONITOR*/
+.outlineAsterArc {
+    fill: none;
+    stroke: #f3f3f3;
+}
+
+.solidAsterArc {
+    stroke: none;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.solidAsterArc:hover {
+    fill: orangered ;
+}
+
+.asterCenterText {
+    font-size: .6em;
+    text-anchor: middle;
+}
+
+/*STYLESHEETS FOR DOCKER CPU*/
+.dockerCpuText {
+    font-size: 3.8em;
+    font-weight: bold;
+    fill: #7d7d7d;
+}
+
+/*STYLESHEETS FOR DOCKER MEMORY*/
+.areaDM {
+    fill: rgba(0, 160, 233, 0.7);
+}
+
+.memtipDPoints {
+    stroke: white;
+    stroke-width: 2px;
+    opacity: 0;
+    fill: #00a0e9;
+}
+
+/*STYLESHEETS FOR 3D POPULATION GLOBE*/
+.panel-globe {
+    background-color: black;
+    color: white;
+}
+
+/*STYLESHEETS FOR SENSOR COUNTING CHART*/
+.countRemainPath {
+    fill: none;
+}
+
+.countInBar {
+    fill: none;
+    stroke: rgba(0, 160, 233, 1);
+    stroke-width: 2px;
+}
+
+.countOutBar {
+    fill: none;
+    stroke: rgba(0, 233, 160, 1);
+    stroke-width: 2px;
+}
+
+.tipCountPoints {
+    stroke-width: 2px;
+    opacity: 1;
+    fill: #41DB00;
+    stroke: white;
+}
+
+/*END: STYLESHEETS FOR VIS CHARTS*/
+
+.text-blue1{
+  color: #55818F !important;
+}
+.text-blue2{
+  color: #51ABD2 !important;
+}
+.text-blue3{
+  color: #B1D3DD !important;
+}
